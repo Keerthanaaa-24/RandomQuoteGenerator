@@ -3,7 +3,6 @@ const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
 
-// --- LOOK FOR THIS MESSAGE IN YOUR TERMINAL ---
 console.log("--- THE NEW OPENROUTER CODE IS RUNNING ---");
 
 const app = express();
@@ -56,7 +55,6 @@ app.post("/api/getQuote", async (req, res) => {
 
   } catch (error) {
     
-    // 6. THIS ERROR MESSAGE IS DIFFERENT
     console.error("Error calling OpenRouter API:", error.response?.data || error.message);
     
     res.status(500).json({ error: "Failed to generate quote" });
