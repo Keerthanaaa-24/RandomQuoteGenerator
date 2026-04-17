@@ -8,7 +8,6 @@ async function generateQuote() {
             headers: { "Content-Type": "application/json" }
         });
         const data = await response.json();
-
         if (data.quote) {
             quoteText.textContent = data.quote;
         } else {
